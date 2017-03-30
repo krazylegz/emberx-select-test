@@ -5,3 +5,9 @@
     <li>{{scientist}}</li>
   {{/each}}
 </ul>
+
+{{#x-select value=scientist id="choose-scientist" as |xs|}}
+  {{#each model as |scientist|}}
+    {{#xs.option value=scientist}}{{scientist}}{{/xs.option}}
+  {{/each}}
+{{/x-select}}
